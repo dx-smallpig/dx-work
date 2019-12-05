@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/document.css" type="text/css">
+</head>
+<script>
+window.onload = function(){
+var button = document . getElementById('button');
+var box = document . getElementById('box');
+var ali = document . getElementsByTagName('li');
+var brnum;
+var bgpositionx = 0;
+var bgpositiony = 0;
+var line = 0;
+var i = 0;
+
+button.onclick = function(){
+    for(var i =0;i<100;i++){
+        box.innerHTML += '<li>' + i + '</li>';
+        brnum = i%10;
+        ali[i].style.backgroundPositionX = bgpositionx + 'px';
+        bgpositionx -= 58;
+        ali[line].style.backgroundPositionY = bgpositiony + 'px';
+        line += 1;
+        if(brnum == 9){
+            box.innerHTML += '<br />'
+            bgpositionx = 0;
+            bgpositiony -= 61;
+        }
+
+    }
+    for(var i =0;i<100;i++){
+        ali[i].onmouseover = function(){
+            this.style.opacity = 1;
+
+        }
+    }
+}
+
+
+}
+</script>
+<body>
+    <input type="button" value="按钮" id="button">
+    <ul id="box"></ul>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+li {
+    width: 58px;
+    height: 56px;
+    display: inline-block;
+    text-decoration: none;
+    float: left;
+    opacity: 0.4;
+    margin-top: 1px;
+    margin-right: 1px;
+    position: relative;
+    background: url(../img/big_img.jpg) no-repeat scroll;
+}
+ul {
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+}
+input {
+    display: block;
+}
